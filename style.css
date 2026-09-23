@@ -1,0 +1,41 @@
+:root {
+    --bg: #121212;
+    --surface: #1e1e1e;
+    --primary: #4caf50;
+    --text: #ffffff;
+    --text-muted: #aaaaaa;
+    --danger: #f44336;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+body { background: var(--bg); color: var(--text); height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+
+#app { display: flex; flex-direction: column; height: 100%; padding: 10px; }
+
+header { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #333; margin-bottom: 10px; }
+header h1 { font-size: 1.2rem; }
+.status { font-size: 0.8rem; color: var(--primary); }
+
+main { flex: 1; display: flex; flex-direction: column; gap: 10px; overflow: hidden; }
+
+/* Scanner */
+#scanner-container { position: relative; width: 100%; height: 40vh; background: #000; border-radius: 12px; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+#scanner-video { width: 100%; height: 100%; object-fit: cover; }
+.scan-region { position: absolute; width: 80%; height: 60%; border: 2px solid var(--primary); border-radius: 8px; box-shadow: 0 0 0 1000px rgba(0,0,0,0.5); }
+.primary-btn { position: absolute; bottom: 20px; background: var(--primary); color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; z-index: 10; }
+.primary-btn.hidden { display: none; }
+
+/* Controls */
+.controls { display: flex; gap: 10px; }
+select, .secondary-btn { flex: 1; padding: 12px; border-radius: 8px; border: 1px solid #333; background: var(--surface); color: white; font-size: 1rem; }
+.secondary-btn { background: #333; cursor: pointer; }
+.secondary-btn:active { background: #444; }
+
+/* Results */
+#results-list { flex: 1; overflow-y: auto; background: var(--surface); border-radius: 12px; padding: 10px; }
+#results-list h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; }
+#scan-list { list-style: none; }
+#scan-list li { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #333; font-size: 0.9rem; }
+#scan-list li:last-child { border-bottom: none; }
+.tag { font-size: 0.7rem; background: var(--primary); color: black; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
