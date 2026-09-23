@@ -39,3 +39,41 @@ select, .secondary-btn { flex: 1; padding: 12px; border-radius: 8px; border: 1px
 #scan-list li { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #333; font-size: 0.9rem; }
 #scan-list li:last-child { border-bottom: none; }
 .tag { font-size: 0.7rem; background: var(--primary); color: black; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+
+/* Segmented Control */
+.segmented-control {
+    display: flex;
+    background: #2c2c2c;
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
+.segment {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #888;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.segment.active {
+    background: #4caf50;
+    color: #121212;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Make Export Button full width */
+.secondary-btn.full-width {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 14px;
+    background: #2c2c2c;
+    color: #fff;
+    border: 1px solid #444;
+}
