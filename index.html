@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>OKH Stock Scanner</title>
+    <<title>Stock Scanner</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#121212">
@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <header>
-            <h1>OKH Stock</h1>
+            <h1>Stock</h1>
             <div class="status" id="status">Ready</div>
         </header>
 
@@ -24,15 +24,16 @@
             </div>
 
             <!-- Controls -->
-            <div class="controls">
-                <select id="scan-type">
-                    <option value="Warehouse">Warehouse</option>
-                    <option value="Job">Job</option>
-                    <option value="Return">Return to OKH</option>
-                    <option value="Pickup">Pickup from OKH</option>
-                </select>
-                <button id="btn-export" class="secondary-btn">Export CSV</button>
+<!-- Custom Segmented Control (Replaces the dropdown) -->
+            <div class="segmented-control" id="scan-type-control">
+                <button class="segment active" data-value="Warehouse">Warehouse</button>
+                <button class="segment" data-value="Job">Job</button>
+                <button class="segment" data-value="Return">Return</button>
+                <button class="segment" data-value="Pickup">Pickup</button>
             </div>
+
+            <!-- Export Button -->
+            <button id="btn-export" class="secondary-btn full-width">Export CSV</button>
 
             <!-- Results List -->
             <div id="results-list">
