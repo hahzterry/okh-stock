@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <<title>Stock Scanner</title>
+    <title>Stock Scanner</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#121212">
@@ -23,8 +23,7 @@
                 <button id="btn-start-scan" class="primary-btn">Start Camera</button>
             </div>
 
-            <!-- Controls -->
-<!-- Custom Segmented Control (Replaces the dropdown) -->
+            <!-- Custom Segmented Control (Replaces the dropdown) -->
             <div class="segmented-control" id="scan-type-control">
                 <button class="segment active" data-value="Warehouse">Warehouse</button>
                 <button class="segment" data-value="Job">Job</button>
@@ -42,7 +41,11 @@
             </div>
         </main>
     </div>
+    
+    <!-- ZXing Library for reliable iOS scanning -->
     <script src="https://unpkg.com/@zxing/library@latest"></script>
+    
+    <!-- App Logic -->
     <script src="app.js"></script>
 </body>
 </html>
